@@ -16,6 +16,9 @@ This baseline utilizes the Mistral-7B model as the pre-trained architecture and 
 The objective is to surpass the performance of this baseline reward model by leveraging a 7B reward model. The reason for utilizing the 7B model is that most labs, including our, are unable to support models larger than 7B.
 
 
+To evaluate whether our model is well-trained, we typically create train, validation, and test datasets. However, empirical evidence suggests that performance on this type of data split does not always align with the model's real-world performance. As a result, we employ alternative methods to assess model performance, such as using Reward-Bench <https://huggingface.co/spaces/allenai/reward-bench>. Therefore, we recommend using the split dataset only as a preliminary check to ensure that the model is adequately trained.
+
+
 | Model                                                 | Average | Chat  | Hard  | Safety | Reasoning | Prior Sets |
 |-------------------------------------------------------|---------|-------|-------|--------|-----------|------------|
 | berkeley-nest/Starling-RM-34B (34B)                   | 81.5    | 96.9  | 59    | 89.9   | 90.3      | 71.4       |
